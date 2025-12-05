@@ -12,6 +12,7 @@ server.get('Show', function(req,res,next){
 server.get('GetProduct', function(req,res,next){
   try{
     var categoryId = req.querystring.categoryId;
+    var err = null;
 
     var catalog = CatalogMgr.getCatalog('storefront-catalog-m-non-en');
     if(!catalog){
