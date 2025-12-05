@@ -1,0 +1,6 @@
+<form xmlns="http://www.demandware.com/xml/form/2008-04-15">
+    <field formid="name" label="Name" type="string" mandatory="true"/>
+    <field formid="email" label="Email" type="string" mandatory="true"/>
+    <field formid="message" label="Message" type="string" mandatory="true"/>
+    <field formid="rating" label="Rating" type="string"/>
+</form>

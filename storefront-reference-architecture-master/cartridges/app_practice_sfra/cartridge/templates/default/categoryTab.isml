@@ -1,0 +1,34 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addCss('/css/compare.css');
+    assets.addCss('/css/Wishlist.css');
+
+    assets.addJs('/js/category.js');
+</isscript>
+
+    <input type="hidden" id="searchUrl" value="${URLUtils.url('MySite-GetCategory')}">
+    <input type="hidden" id="listUrl" value="${URLUtils.url('Wishlist-GetListJson')}">
+
+
+
+    <div class="tabs">
+        <button class="category-tab" data-category-id="womens-outfits">Womens</button>
+        <button class="category-tab" data-category-id="mens-clothing-suits">Mens</button>
+        <button class="category-tab" data-category-id="bracelet">Accessories</button>
+    </div>
+
+    <div id="category-content"></div>
+
+    <div class="compare-action">
+    <button id="compareBtn" disabled>Compare</button>
+    </div>
+
+    <div id="compareModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="compareModalBody"></div>
+        </div>
+    </div>
+
+</isdecorate>

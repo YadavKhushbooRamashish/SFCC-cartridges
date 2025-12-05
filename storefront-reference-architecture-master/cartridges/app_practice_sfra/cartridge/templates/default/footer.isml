@@ -1,0 +1,26 @@
+<footer class="custom-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+          <h3>Our Store</h3>
+          <p>Your trusted destination for premium fashion, accessories, and more.</p>
+        </div>
+
+        <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="${URLUtils.url('Home-Show')}">Home</a></li>
+          <li><a href="${URLUtils.url('Search-Show')}">New Arrivals</a></li>
+          <li><a href="${URLUtils.url('Cutomer-Show')}">My Account</a></li>
+          <li><a href="${URLUtils.url('ContactUs-Start')}">Contact Us</a></li>
+        </ul>
+</div>
+<div class="footer-col">
+<h3>Get in Touch</h3>
+<p>Email: support@ourstore.com</p>
+<p>Phone: +91765432178</p>
+</div>
+      
+    </div>
+  
+</footer>
+

@@ -1,0 +1,92 @@
+<iscomment>
+    <h2>${pdict.categoryName}</h2>
+
+    <div class="product-grid">
+        <input type="hidden" id="compareUrl" value="${URLUtils.url('MySite-GetCompared')}">
+        <input type="hidden" id="addUrl" value="${URLUtils.url('MySite-AddProduct')}">
+
+        <isloop items="${pdict.products}" var="product">
+            <div class="product-card">
+                <img src="${product.image}" alt="${product.name}" width="150">
+                <div class="wishlist-heart" data-pid="${p.ID}" data-in-wishlist="${p.inWishlist ? 'true' : 'false'}">
+                </div>
+
+                <i class="fa fa-heart ${p.inWishlist ? 'active' : ''}"></i>
+                <p>${product.pid}</p>
+                <p>${product.name}</p>
+                <p>Price: $${product.price}</p>
+                <label>
+                    <input type="checkbox" class="compare-checkbox" data-product-id="${product.pid}">
+                    Compare
+                </label>
+                <div class="product-actions">
+                    <input type="number" class="quantity-field" value="1" min="1" />
+                    <button class="add-to-cart-btn" data-product-id="${product.pid}">Add to Cart</button>
+                </div>
+
+            </div>
+        </isloop>
+    </div>
+</iscomment>
+
+
+
+<h2>${pdict.categoryName}</h2>
+
+<div class="product-grid">
+
+
+    <input type="hidden" id="compareUrl" value="${URLUtils.url('MySite-GetCompared')}" />
+    <input type="hidden" id="addUrl" value="${URLUtils.url('MySite-AddProduct')}" />
+    <input type="hidden" id="wishlistUrl" value="${URLUtils.url('Wishlist-AddProduct')}" />
+    <input type="hidden" id="removeprod" value="${URLUtils.url('Wishlist-RemoveProduct')}" />
+
+
+
+
+    <isloop items="${pdict.products}" var="product">
+
+        <div class="product-card" data-pid="${product.pid}">
+
+
+            <img src="${product.image}" alt="${product.name}" width="150" />
+
+           
+
+                    <button class="wishlist-heart" data-pid="${product.pid}">
+                <i class="fa fa-heart ${product.wishlist ? 'active' : ''}"></i>
+
+            </button>
+                
+            
+
+
+
+            
+
+
+
+            <p>${product.pid}</p>
+            <p>${product.name}</p>
+            <p>Price: $${product.price}</p>
+
+
+            <label>
+                <input type="checkbox" class="compare-checkbox" data-product-id="${product.pid}" />
+                Compare
+            </label>
+
+
+            <div class="product-actions">
+                <input type="number" class="quantity-field" value="1" min="1" />
+
+                <button class="add-to-cart-btn" data-product-id="${product.pid}">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </isloop>
+
+</div>

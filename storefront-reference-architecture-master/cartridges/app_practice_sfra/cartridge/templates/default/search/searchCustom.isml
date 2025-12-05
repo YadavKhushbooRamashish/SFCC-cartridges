@@ -1,0 +1,21 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/feedback.js');
+</isscript>
+
+    <div class="container" style="padding:20px;">
+        <h1>🔍 Product Search by ID</h1>
+        <p>Enter a product ID from Business Manager to see its details.</p>
+
+
+        <input type="text" id="productIdInput" placeholder="Enter Product ID" class="form-control"
+            action="${URLUtils.url('Feedback-GetProduct')}" required />
+        <button type="button" class="btn btn-primary searchcustom">Search</button>
+
+        <div id="productResult" style="margin-top:20px;"></div>
+    </div>
+
+    <script src="${URLUtils.staticURL('/js/feedback.js')}"></script>
+
+</isdecorate>

@@ -1,0 +1,24 @@
+<isdecorate template="common/layout/page">
+  <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/productVar.js');
+
+  </isscript>
+  <div class="searchbar">
+    <input type="text" id="productInput" placeholder="Enter Product Id">
+    <button id="search-btn">Search</button>
+    <iscomment> <input type="hidden" id="searchId" value="${URLUtils.url('MyPage-GetProduct')}"/> </iscomment>
+    <iscomment> <input type="hidden" id="searchId" value="${URLUtils.url('MyPage-GetBundleProduct')}"/> </iscomment>
+    <input type="hidden" id="searchId" value="${URLUtils.url('ProductVariation-GetProduct')}"/>
+    <input type="hidden" id="filterUrl" value="${URLUtils.url('ProductVariation-GetVariant')}" />
+
+  </div>
+  <div id="searchResultContainer">
+    
+
+  </div>
+
+
+
+
+</isdecorate> 

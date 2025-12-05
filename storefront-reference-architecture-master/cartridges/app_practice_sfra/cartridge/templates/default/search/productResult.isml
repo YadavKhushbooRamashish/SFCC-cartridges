@@ -1,0 +1,16 @@
+<isdecorate template="common/layout/page">
+    <isreplace value="${pdict.body}">
+        <div class="search-container" style="text-align:center; margin:40px;">
+            <h2>🔍 Search Product by ID</h2>
+
+            <form id="searchForm" action="${URLUtils.url('SearchCustom-GetProduct')}" method="get">
+                <input type="text" id="productIdInput" name="productId" placeholder="Enter Product ID" style="padding:8px; width:300px;" />
+                <button type="submit" class="searchcustom" style="padding:8px 16px;">Search</button>
+            </form>
+
+            <div id="productResult" style="margin-top:30px;"></div>
+        </div>
+
+        <script src="${URLUtils.staticURL('/js/feedback.js')}"></script>
+    </isreplace>
+</isdecorate>

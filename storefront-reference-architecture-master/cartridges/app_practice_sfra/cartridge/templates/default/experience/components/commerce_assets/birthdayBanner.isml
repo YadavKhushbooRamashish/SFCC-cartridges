@@ -1,0 +1,14 @@
+<section class="birthday-banner" style="background-image: url(${pdict.bgImage.url});
+background-position: ${pdict.bgImage.focalPointX} ${pdict.bgImage.focalPointY};">
+
+  <div class="birthday-banner-content">
+    <h1 class="birthday-headline">${pdict.headline}</h1>
+
+    <isif condition="${subheadline}">
+      <p class="birthday-subheadline">${pdict.subheadline}</p>
+    </isif>
+    <isif condition="${pdict.ctaLabel && pdict.ctaUrl}">
+      <a href="${pdict.ctaUrl}" class="birthday-button">${pdict.ctaLabel}</a>
+    </isif>
+  </div>
+</section>

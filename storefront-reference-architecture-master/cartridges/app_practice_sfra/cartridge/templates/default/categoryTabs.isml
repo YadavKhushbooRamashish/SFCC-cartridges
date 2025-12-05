@@ -1,0 +1,27 @@
+<isdecorate template="common/layout/page">
+
+  <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/feedback.js');
+        assets.addJs('/js/cart.js');
+  </isscript>
+
+  <div class="container categoryURL" style="padding: 20px; text-align: center;"
+    Url="${URLUtils.url('Feedback-GetProduct')}">
+    <input type="hidden" class="add-ProductCustom" getallProductsurl="${URLUtils.url('Feedback-GetAllProducts')}" value="${URLUtils.url('Cart-AddProduct')}">
+    <h1>🛍️ Category Product Display</h1>
+    <p>Click on a category tab to view its products.</p>
+    <div class="category-tabs" style="margin: 20px 0; text-align: center;">
+      <button class="category-tab  btn btn-primary" data-category-id="womens-outfits">Women</button>
+      <button class="category-tab  btn btn-primary" data-category-id="mens-clothing-suits">Men</button>
+      <button class="category-tab  btn btn-primary" data-category-id="bracelet">Make Up</button>
+    </div>
+
+    <div id="productContainer" class="product-grid"
+      style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+    </div>
+    
+      <button id="allCart">All Add To Cart</button>
+    </div>
+</isdecorate>

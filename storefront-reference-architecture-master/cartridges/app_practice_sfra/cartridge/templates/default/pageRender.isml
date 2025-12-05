@@ -1,0 +1,13 @@
+<h1>Product Categories</h1>
+<div class="category-tabs">
+  <button data-cat="mens-clothing-suits">Men's</button>
+  <button data-cat="womens-outfits">Women's</button>
+  <button data-cat="bracelet">Accessories</button>
+  <div class="product-listing">
+   <isinclude url="${URLUtils.url('Category-ShowRemote', 'cid', 'mens-clothing-suits')}"/>
+  </div>
+</div>
+<div class="footer">
+  <isinclude template="footer"/>
+</div>
+

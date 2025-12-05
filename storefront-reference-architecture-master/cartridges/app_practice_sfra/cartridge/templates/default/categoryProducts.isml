@@ -1,0 +1,65 @@
+<iscomment> <h2>${pdict.category.displayName}</h2>
+<div class="product-grid">
+
+  <isloop items="${pdict.products}" var="product">
+
+    <div class="product-tile">
+      <div class="product-image">
+      <a href="${URLUtils.url('Product-Show', 'pid', product.ID)}">
+              <img src="${product.getImage('small', 0).absURL}" alt="${product.name}" />
+
+      </a>
+      </div>
+      <div class="product-name">
+      <a href="${URLUtils.url('Product-Show', 'pid', product.ID)}">
+       <p>${product.name}</p></a>
+       
+      </div>
+      <div class="product-price">
+        <p><b>Price:</b>${product.priceModel.price.value} ${product.priceModel.price.currencyCode}
+        </p>
+
+      </div>
+    </div>
+
+  </isloop>
+
+</div>
+
+
+
+    
+ </iscomment>
+
+ <h2 class="mt-4">${pdict.category.displayName}</h2>
+
+<div class="container mt-3">
+    <div class="row">
+
+        <isloop items="${pdict.products}" var="product">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+
+                <div class="card h-100 shadow-sm product-tile">
+                    <a href="${URLUtils.url('Product-Show', 'pid', product.ID)}">
+                        <img class="card-img-top" src="${product.getImage('small', 0).absURL}" alt="${product.name}">
+                    </a>
+
+                    <div class="card-body text-center">
+                        <h6 class="card-title">
+                            <a href="${URLUtils.url('Product-Show', 'pid', product.ID)}" class="text-dark text-decoration-none">
+                                ${product.name}
+                            </a>
+                        </h6>
+
+                        <p class="card-text">
+                            <strong>Price:</strong>
+                            ${product.priceModel.price.value} ${product.priceModel.price.currencyCode}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </isloop>
+
+    </div>
+</div>

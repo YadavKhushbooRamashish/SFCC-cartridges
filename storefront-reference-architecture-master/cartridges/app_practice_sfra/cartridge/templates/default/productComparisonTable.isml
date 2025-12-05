@@ -1,0 +1,15 @@
+<isif condition="${!empty(pdict.products)}">
+    <div class="compare-container">
+        <isloop items="${pdict.products}" var="product">
+            <div class="compare-card">
+                <img src="${product.image}" alt="${product.name}" >
+                <h3>${product.name}</h3>
+                <p>Price: $${product.price}</p>
+                <p>Brand: ${product.brand}</p>
+                <p>Product ID: ${product.id}</p>
+            </div>
+        </isloop>
+    </div>
+<iselse>
+    <p>No products available for comparison.</p>
+</isif>

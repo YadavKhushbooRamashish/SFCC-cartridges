@@ -1,0 +1,40 @@
+<isdecorate template="common/layout/page">
+  <isreplace name="body">
+    <div class="weather-container">
+      <h1 class="page-title">Weather Forecast</h1>
+
+      <form id="weatherForm">
+        <label>Latitude</label>
+        <input type="text" id="latitude" name="latitude" required>
+
+        <label>Longitude</label>
+        <input type="text" id="longitude" name="longitude" required>
+
+        <input type="hidden" id="weatherUrl" value="${URLUtils.url('Weather-GetData')}">
+
+        <button type="submit" class="btn-primary">Get Weather</button>
+
+
+
+      </form>
+
+      <div id="weatherResult" class="weather-result hidden">
+        <h2>Current Weather</h2>
+        <p><strong>Temperature:</strong> <span id="temp"></span> Celsius</p>
+
+        <p><strong>Wind Speed:</strong><span id="wind"></span>km/h</p>
+
+      </div>
+
+    </div>
+    <isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addCss('/css/weather.css');
+
+    assets.addJs('/js/weatherClient.js');
+</isscript>
+
+
+
+
+</isdecorate>

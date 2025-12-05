@@ -1,0 +1,22 @@
+
+<isif condition="${pdict.isBundle}">
+    <h3>Bundle Products:</h3>
+    <div class="bundle-container">
+        <isloop items="${pdict.bundledProduct}" var="p">
+            <div class="product-card">
+                <img src="${p.image}" alt="${p.name}">
+                <h4>"${p.name}"</h4>
+                <p><strong>ID:</strong> "${p.id}"</p>
+                <p><strong>Price:</strong> "${p.price}"</p>
+            </div>
+        </isloop>
+    </div>
+<iselse>
+<div class="product-detail">
+    <img src="${pdict.product.image}" alt="${pdict.product.name}">
+    <p>"${pdict.product.name}"</p>
+    <p>"${pdict.product.id}</p>
+    <p>"${pdict.product.price}"</p>
+  
+</div>
+</isif>

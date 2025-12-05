@@ -1,0 +1,57 @@
+
+{
+  "name": "Birthday Banner",
+  "description": "A special birthday banner with background image, headline, subheadline, and CTA.",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "birthdayBannerAttributes",
+      "name": "Birthday Banner Content",
+      "description": "Content fields for Birthday Banner.",
+      "attribute_definitions": [
+        {
+          "id": "headline",
+          "name": "Headline",
+          "description": "Main heading text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "subheadline",
+          "name": "Sub Headline",
+          "description": "Secondary text line",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "bgImage",
+          "name": "Background Image",
+          "description": "Upload background Image",
+          "type": "image",
+          "required": false
+        },
+        {
+          "id": "ctaLabel",
+          "name": "CTA Label",
+          "description": "Text for CTA button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "ctaUrl",
+          "name": "CTA URL",
+          "description": "Link for CTA button",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+
+}
+
+
+
+
+
